@@ -1,5 +1,6 @@
 import helmet from 'helmet';
 import cors from 'cors';
+import nocache from 'nocache';
 import { Express } from 'express';
 
 export default (app: Express) => {
@@ -17,7 +18,7 @@ export default (app: Express) => {
     }));
 
     if (dev) {
-        app.use(helmet.noCache());
+        app.use(nocache());
     }
 
     // Apply CORS.

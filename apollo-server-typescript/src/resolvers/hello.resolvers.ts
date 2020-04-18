@@ -1,12 +1,9 @@
 import { IResolvers } from 'graphql-tools';
 
-const resolverMap: IResolvers = {
+export default {
     Query: {
         message: (source, args, context) => {
             return 'Hi there!';
         }
     }
-};
-
-// noinspection JSUnusedGlobalSymbols
-export default resolverMap;
+} as IResolvers;
